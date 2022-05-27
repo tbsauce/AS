@@ -6890,6 +6890,10 @@ textarea.form-control-lg {
   border-color: #ffc800 !important;
 }
 
+.border-left-primary {
+  border-left: 0.25rem solid #ffc800 !important;
+}
+
 .border-secondary {
   border-color: #6c757d !important;
 }
@@ -7260,6 +7264,11 @@ textarea.form-control-lg {
   margin-left: 3rem !important;
 }
 
+.mx-6{
+  margin-right: 25% !important;
+  margin-left: 25% !important;
+}
+
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
@@ -7292,6 +7301,11 @@ textarea.form-control-lg {
 
 .my-5 {
   margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.my-6{
+  margin-top: 20% !important;
   margin-bottom: 3rem !important;
 }
 
@@ -11784,8 +11798,9 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: none;
   position: fixed;
   bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
+  right: 25%;
+  
+  border: 0px solid #f1f1f1;
   z-index: 9;
 }
 
@@ -11822,3 +11837,10 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-bottom:10px;
   opacity: 0.8;
 }
+
+
+
+.fa-comment-dots {
+  color: white;
+}
+
