@@ -53,10 +53,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function openForm() {
-  document.getElementById("login").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("login").style.display = "none";
+function logintext(){
+    var firstname = document.getElementById("exampleFirstName").value; 
+    var lastname = document.getElementById("exampleLastName").value;
+    alert("1");
+    if(firstname != null || lastname != null){
+        alert(firstname + lastname);
+        parent.document.getElementById("navlogin").innerHTML = "aaa";
+        alert("3");
+    }
 }
