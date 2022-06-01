@@ -11885,3 +11885,9 @@ position: absolute;
 .rating2 a {
   float:none
 }
+
+.backButton{
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 59px
+}
