@@ -59,9 +59,13 @@ function logintext(){
     alert("1");
     if(firstname != null || lastname != null){
         alert(firstname + lastname);
-        document.getElementById("navlogin").innerHTML = "aaa";
+        //document.getElementById("navlogin").innerHTML = firstname;
         alert("3");
+        return firstname+lastname
     }
+
+    return "Login"
+    
 }
 
 
