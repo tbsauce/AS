@@ -1,4 +1,4 @@
-/*!
+ /*!
 * Start Bootstrap - Agency v7.0.11 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2022 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
@@ -54,25 +54,20 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 //cnage text login
-let text = "ola";
 function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
     var lastname = document.getElementById("exampleLastName").value;
     if(firstname != null || lastname != null){
-        //alert(firstname + lastname);
-        //alert("3");
-        text = "finalmente";
+        sessionStorage.setItem("Name", firstname + lastname);
+        document.getElementById("navlogin").href = "Pessoa.html"; 
     }
-    else{
-        text = "boi";
-    }
-
 }
 
+if(sessionStorage.length == 0)
+    sessionStorage.setItem("Name", "Login");
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("navlogin").innerHTML= text;
-    alert(text);
+    document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name");
 }, false);
 
 
