@@ -177,12 +177,12 @@
           </ul>
           
           <ul class="days">  
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <li><span class="active">1</span></li>
+            <a href="javascript:openForm()"><li>2</li></a>
+            <li><span class="active">3</span></li>
             <li>4</li>
             <li>5</li>
-            <li>6</li>
+            <li><span class="active">6</span></li>
             <li>7</li>
             <li>8</li>
             <li>9</li>
@@ -195,15 +195,15 @@
             <li>16</li>
             <li>17</li>
             <li>18</li>
-            <li>19</li>
+            <li><span class="active">19</span></li>
             <li>20</li>
             <li>21</li>
-            <li>22</li>
+            <li><span class="active">22</span></li>
             <li>23</li>
-            <li>24</li>
+            <li><span class="active">24</span></li>
             <li>25</li>
-            <li>26</li>
-            <li>27</li>
+            <li><span class="active">26</span></li>
+            <li><span class="active">27</span></li>
             <li>28</li>
             <li>29</li>
             <li>30</li>
@@ -227,6 +227,15 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
+    <script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 </body>
 
 </html>
