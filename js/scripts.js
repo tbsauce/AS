@@ -53,19 +53,27 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+//cnage text login
+let text = "ola";
 function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
     var lastname = document.getElementById("exampleLastName").value;
-    alert("1");
     if(firstname != null || lastname != null){
-        alert(firstname + lastname);
-        //document.getElementById("navlogin").innerHTML = firstname;
-        alert("3");
-        return firstname+lastname
+        //alert(firstname + lastname);
+        //alert("3");
+        text = "finalmente";
+    }
+    else{
+        text = "boi";
     }
 
-    return "Login"
-    
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("navlogin").innerHTML= text;
+    alert(text);
+}, false);
+
 
 
