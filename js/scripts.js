@@ -59,15 +59,19 @@ function logintext(){
     var lastname = document.getElementById("exampleLastName").value;
     if(firstname != null || lastname != null){
         sessionStorage.setItem("Name", firstname + lastname);
-        document.getElementById("navlogin").href = "Pessoa.html"; 
+        sessionStorage.setItem("ref", "Pessoa.html");
     }
 }
 
-if(sessionStorage.length == 0)
+if(sessionStorage.length == 0){
+    sessionStorage.setItem("ref", "login.html");
     sessionStorage.setItem("Name", "Login");
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name");
+    document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
+    document.getElementById("navlogin").href= sessionStorage.getItem("ref");
+    document.getElementById("name_pessoa").innerHTML= sessionStorage.getItem("Name"); 
 }, false);
 
 
