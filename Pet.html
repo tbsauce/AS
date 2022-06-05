@@ -196,64 +196,98 @@
         
     </div>
 
-
+    
 
     <div class="calendarContainer">
+        <div class="text-center">
+            <h1 class="tt">Agendamentos</h1>
+        </div>
+        
         <div class="month">      
             <ul>
               <li class="prev">&#10094;</li>
               <li class="next">&#10095;</li>
               <li>
-                August<br>
-                <span style="font-size:18px">2021</span>
+                Junho<br>
+                <span style="font-size:18px">2022</span>
               </li>
             </ul>
           </div>
           
           <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
+            <li>S</li>
+            <li>T</li>
+            <li>Q</li>
+            <li>Q</li>
+            <li>S</li>
+            <li>S</li>
+            <li>D</li>
           </ul>
           
           <ul class="days">  
-            <li><span class="active">1</span></li>
+            <li title="Dia já preenchido!"><span class="active">1</span></li>
             <a href="javascript:openForm()"><li>2</li></a>
-            <li><span class="active">3</span></li>
-            <li>4</li>
-            <li>5</li>
-            <li><span class="active">6</span></li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li><span class="active">19</span></li>
-            <li>20</li>
-            <li>21</li>
-            <li><span class="active">22</span></li>
-            <li>23</li>
-            <li><span class="active">24</span></li>
-            <li>25</li>
-            <li><span class="active">26</span></li>
-            <li><span class="active">27</span></li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
+            <li title="Dia já preenchido!"><span class="active">3</span></li>
+            <a href="javascript:openForm()"><li>4</li></a>
+            <a href="javascript:openForm()"><li>5</li></a>
+            <li title="Dia já preenchido!"><span class="active">6</span></li>
+            <a href="javascript:openForm()"><li>7</li></a>
+            <a href="javascript:openForm()"><li>8</li></a>
+            <a href="javascript:openForm()"><li>9</li></a>
+            <li title="Dia já preenchido!"><span class="active">10</span></li>
+            <a href="javascript:openForm()"><li>11</li></a>
+            <a href="javascript:openForm()"><li>12</li></a>
+            <a href="javascript:openForm()"><li>13</li></a>
+            <a href="javascript:openForm()"><li>14</li></a>
+            <a href="javascript:openForm()"><li>15</li></a>
+            <a href="javascript:openForm()"><li>16</li></a>
+            <a href="javascript:openForm()"><li>17</li></a>
+            <a href="javascript:openForm()"><li>18</li></a>
+            <li title="Dia já preenchido!"><span class="active">19</span></li>
+            <a href="javascript:openForm()"><li>20</li></a>
+            <a href="javascript:openForm()"><li>21</li></a>
+            <li title="Dia já preenchido!"><span class="active">22</span></li>
+            <a href="javascript:openForm()"><li>23</li></a>
+            <li title="Dia já preenchido!"><span class="active">24</span></li>
+            <a href="javascript:openForm()"><li>25</li></a>
+            <li title="Dia já preenchido!"><span class="active">26</span></li>
+            <li title="Dia já preenchido!"><span class="active">27</span></li>
+            <a href="javascript:openForm()"><li>28</li></a>
+            <a href="javascript:openForm()"><li>29</li></a>
+            <a href="javascript:openForm()"><li>30</li></a>
           </ul>
     </div>
+    <div class="form-popup" id="myForm">
+        <form action="Pet.html" class="form-container">
+          <h1>Fazer Marcação</h1>
+          <label>Tipo de agendamento:</label>
+          <select class="option" required>
+            <option key="default"></option>
+            <option>Distribuição de Alimentos</option>
+            <option>Consultas</option>
+          </select>
+          <h>Selecione a janela horária para concluir a marcação:</h>
+          <select class="option" required>
+                <option key="default"></option>
+                <option>09:00h - 10:00h</option>
+                <option>10:00h - 11:00h</option>
+                <option>11:00h - 12:00h</option>
+                <option>12:00h - 13:00h</option>
+                <option>13:00h - 14:00h</option>
+                <option>14:00h - 15:00h</option>
+                <option>15:00h - 16:00h</option>
+                <option>17:00h - 18:00h</option>
+                <option>18:00h - 19:00h</option>
+                <option>19:00h - 20:00h</option>
+                <option>20:00h - 21:00h</option>
+                <option>21:00h - 22:00h</option>
+                <option>22:00h - 23:00h</option>
+                <option>23:00h - 00:00h</option>
+              </select>
+          <button type="submit" class="btn">Agendar</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
+        </form>
+      </div>
 
     <!-- inspired by http://colorhunt.co/c/8184 and 
     https://dribbble.com/shots/2407357-Calendar%60 -->
