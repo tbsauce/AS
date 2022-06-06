@@ -110,7 +110,7 @@
                                         </div>
                                         <div class="col-sm-9">
                                             <button onclick="javascript:openForm()" id="btn">Change Plan</button>
-                                            <a id="btn1">Premium</a>
+                                            <a id="btn1">Standart</a>
                                             
                                         </div>
                                     </div>
@@ -186,23 +186,26 @@
                                     <h1 class="h4 text-gray-900 mb-4">Select a payment method</h1>
                                 </div>
                                 <form class="user">
-                                    <a href="Pessoa.html" class="btn btn-primary btn-user btn-block">
-                                        <i class="fab fa-cc-MBway"></i> 
+                                    <a onclick="closeForm()" class="btn btn-primary btn-user btn-block">
+                                        <i onclick="closeForm()" class="fab fa-cc-MBway"></i> 
                                         MB Way
                                     </a>
-                                    <a href="Pessoa.html" class="btn btn-secondary btn-user btn-block">
-                                        <i class="fa-brands fa-paypal"></i> 
+                                    <a onclick="closeForm()" class="btn btn-secondary btn-user btn-block">
+                                        <i onclick="closeForm()" class="fa-brands fa-paypal"></i> 
                                         PayPal
                                     </a>
-                                    <a href="Pessoa.html" class="btn btn-dark btn-user btn-block">
-                                        <i class="fab fa-cc-visa"></i> 
+                                    <a onclick="closeForm()" class="btn btn-dark btn-user btn-block">
+                                        <i onclick="closeForm()" class="fab fa-cc-visa"></i> 
                                         Visa
                                     </a>
                                     <a onclick="closeForm()" class="btn btn-danger btn-user btn-block">
                                         <i onclick="closeForm()" class="fab fa-cc-mastercard"></i> 
                                         MasterCard
                                     </a>
-                                    <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
+                                    <a href="Pessoa.html" class="btn btn-danger btn-user btn-block">
+                                        <i onclick="closeForm()"></i> 
+                                        Cancel
+                                    </a>
                                 </form>
                             </div>
                         </div>
