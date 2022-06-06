@@ -58,7 +58,7 @@ function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
     var lastname = document.getElementById("exampleLastName").value;
     if(firstname != null || lastname != null){
-        sessionStorage.setItem("Name", firstname + lastname);
+        sessionStorage.setItem("Name", firstname + " " + lastname);
         sessionStorage.setItem("ref", "Pessoa.html");
     }
 }
