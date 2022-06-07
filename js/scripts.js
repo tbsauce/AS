@@ -74,10 +74,12 @@ function logintext(){
     }
 }
 
+//Log out clear people
 function logOut(){
     sessionStorage.clear();
 }
 
+//Login
 function Login(){
     var user = document.getElementById("exampleInputName").value;
     var pass = document.getElementById("exampleInputPassword").value;
@@ -85,7 +87,6 @@ function Login(){
         alert("incorrect");
     else
         alert("correct");
-
 }
 
 //default for login
