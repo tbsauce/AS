@@ -66,14 +66,26 @@ function logintext(){
 function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
     var lastname = document.getElementById("exampleLastName").value;
+    var pass = document.getElementById("exampleInputPassword").value;
     if(firstname != null || lastname != null){
         sessionStorage.setItem("Name", firstname + " " + lastname);
         sessionStorage.setItem("ref", "Pessoa.html");
+        sessionStorage.setItem("Pass", pass);
     }
 }
 
 function logOut(){
     sessionStorage.clear();
+}
+
+function Login(){
+    var user = document.getElementById("exampleInputName").value;
+    var pass = document.getElementById("exampleInputPassword").value;
+    if(!(sessionStorage.getItem("Name") == user && sessionStorage.getItem("Name") == pass))
+        alert("incorrect");
+    else
+        alert("correct");
+
 }
 
 //default for login
