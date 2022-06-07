@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-//cnage text login
+//chnage text login
 function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
     var lastname = document.getElementById("exampleLastName").value;
@@ -63,11 +63,26 @@ function logintext(){
     }
 }
 
+function logintext(){
+    var firstname = document.getElementById("exampleFirstName").value; 
+    var lastname = document.getElementById("exampleLastName").value;
+    if(firstname != null || lastname != null){
+        sessionStorage.setItem("Name", firstname + " " + lastname);
+        sessionStorage.setItem("ref", "Pessoa.html");
+    }
+}
+
+function logOut(){
+    sessionStorage.clear();
+}
+
+//default for login
 if(sessionStorage.length == 0){
     sessionStorage.setItem("ref", "login.html");
     sessionStorage.setItem("Name", "Login");
 }
 
+//changes inf of person
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
     document.getElementById("navlogin").href= sessionStorage.getItem("ref");
