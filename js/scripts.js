@@ -83,7 +83,7 @@ function logOut(){
 function Login(){
     var user = document.getElementById("exampleInputName").value;
     var pass = document.getElementById("exampleInputPassword").value;
-    if(!(sessionStorage.getItem("Name") == user && sessionStorage.getItem("Name") == pass))
+    if(!(sessionStorage.getItem("Name").localeCompare(user) && sessionStorage.getItem("Name").localeCompare(pass)))
         alert("incorrect");
     else
         alert("correct");
