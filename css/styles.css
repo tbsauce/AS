@@ -97,7 +97,7 @@ hr {
   opacity: 0.25;
 }
 
-hr:not([size]) {
+hr:not([he]) {
   height: 1px;
 }
 
