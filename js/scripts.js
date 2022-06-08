@@ -59,15 +59,22 @@ function login1()
     var p = "freixo";    
     
     var username = document.getElementById('uname').value;
-    var password = document.getElementById('psw').value;
+    //var password = document.getElementById('psw').value;
     //sessionStorage.setItem("currentloggedin", username);
     
     
-        
+        if(username!=null){
+            
             alert('Login successful');
             //window.location.href = "/home/filipe/Desktop/AS/index.html"
             sessionStorage.setItem("Name", username);
             sessionStorage.setItem("ref", "Pessoa.html");
+            
+        }
+
+       
+        
+         
             
         /*
           if(u === username && p===password)
@@ -88,14 +95,7 @@ function login1()
 
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
-    document.getElementById("navlogin").href= sessionStorage.getItem("ref");
-    document.getElementById("name_pessoa").innerHTML= sessionStorage.getItem("Name");
-    
 
-
-}, false);
 
 
 
@@ -111,6 +111,8 @@ function logintext(){
         sessionStorage.setItem("Name", firstname + " " + lastname);
         sessionStorage.setItem("ref", "Pessoa.html");
     }
+
+    
 
     
 }/*
@@ -141,13 +143,20 @@ function Login(){
         alert("correct");
 }
 
-//default for login
+//default for login*/
 if(sessionStorage.length == 0){
     sessionStorage.setItem("ref", "login.html");
     sessionStorage.setItem("Name", "Login");
-}*/
+}
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
+        document.getElementById("navlogin").href= sessionStorage.getItem("ref");
+        document.getElementById("name_pessoa").innerHTML= sessionStorage.getItem("Name");
+        
 
+
+    }, false);
 
