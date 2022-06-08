@@ -115,6 +115,10 @@ function logintext(){
     
 
     
+}
+
+function logOut(){
+    sessionStorage.clear();
 }/*
 
 function logintext(){
@@ -129,9 +133,7 @@ function logintext(){
 }
 
 //Log out clear people
-function logOut(){
-    sessionStorage.clear();
-}
+
 
 //Login
 function Login(){
