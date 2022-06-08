@@ -53,7 +53,57 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+function login1()
+{
+    var u = "filipe"
+    var p = "freixo";    
+    
+    var username = document.getElementById('uname').value;
+    var password = document.getElementById('psw').value;
+    //sessionStorage.setItem("currentloggedin", username);
+    
+    
+        
+            alert('Login successful');
+            //window.location.href = "/home/filipe/Desktop/AS/index.html"
+            sessionStorage.setItem("Name", username);
+            sessionStorage.setItem("ref", "Pessoa.html");
+            
+        /*
+          if(u === username && p===password)
+        {  
+        }
+ 
+        else
+        {
+            alert('Login failed');
+            //window.location.href = "/home/filipe/Desktop/AS/login.html"
+            sessionStorage.setItem("Name", "Login");
+            sessionStorage.setItem("ref", "login.html");
+
+                
+        }*/
+
+    //changes inf of person
+
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
+    document.getElementById("navlogin").href= sessionStorage.getItem("ref");
+    document.getElementById("name_pessoa").innerHTML= sessionStorage.getItem("Name");
+    
+
+
+}, false);
+
+
+
+
+
+
 //chnage text login
+
 function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
     var lastname = document.getElementById("exampleLastName").value;
@@ -61,7 +111,9 @@ function logintext(){
         sessionStorage.setItem("Name", firstname + " " + lastname);
         sessionStorage.setItem("ref", "Pessoa.html");
     }
-}
+
+    
+}/*
 
 function logintext(){
     var firstname = document.getElementById("exampleFirstName").value; 
@@ -93,14 +145,9 @@ function Login(){
 if(sessionStorage.length == 0){
     sessionStorage.setItem("ref", "login.html");
     sessionStorage.setItem("Name", "Login");
-}
+}*/
 
-//changes inf of person
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
-    document.getElementById("navlogin").href= sessionStorage.getItem("ref");
-    document.getElementById("name_pessoa").innerHTML= sessionStorage.getItem("Name"); 
-}, false);
+
 
 
 
