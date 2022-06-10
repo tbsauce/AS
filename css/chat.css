@@ -509,9 +509,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 80vh;
-  max-height: 500px;
+  width: 40%;
+  height: 70%;
   z-index: 2;
   overflow: hidden;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
@@ -528,27 +527,29 @@ body {
   color: #fff;
   text-transform: uppercase;
   text-align: left;
-  padding: 10px 10px 10px 50px;
+  padding: 30px 10px 10px 50px;
 }
 .chat-title h1, .chat-title h2 {
   font-weight: normal;
-  font-size: 10px;
-  margin: 0;
+  font-size: 30px;
+  margin: 10;
   padding: 0;
 }
+
 .chat-title h2 {
   color: white;
   font-size: 8px;
   letter-spacing: 1px;
 }
+
 .chat-title .avatar {
   position: absolute;
   z-index: 1;
   top: 8px;
   left: 9px;
   border-radius: 30px;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -580,18 +581,20 @@ body {
   border-radius: 10px 10px 10px 0;
   background: rgba(0, 0, 0, .3);
   margin: 8px 0;
-  font-size: 11px;
+  font-size: 21px;
   line-height: 1.4;
   margin-left: 35px;
   position: relative;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
+
 .timestamp {
   position: absolute;
   bottom: -15px;
   font-size: 9px;
   color: rgba(0, 0, 0, 0.3);
 }
+
 .message::before {
   content: '';
   position: absolute;
@@ -606,8 +609,8 @@ body {
   bottom: -15px;
   left: -35px;
   border-radius: 30px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   overflow: hidden;
   margin: 0;
   padding: 0;
