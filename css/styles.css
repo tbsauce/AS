@@ -105,7 +105,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -150,7 +150,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 
 p {
@@ -2530,6 +2530,14 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 
+.btn_close2{
+  background-color: transparent;
+  width: 8%;
+  height: 5%;
+  position: fixed;
+  top: 1.2%; 
+  right: 6%;
+}
 .form-switch {
   padding-left: 2.5em;
 }
@@ -11904,6 +11912,15 @@ position: absolute;
   bottom: 23px;
   right: 28px;
   width: 280px;
+}
+
+.form-popup1 {
+  width: 35%;
+  height: 10%;
+  position: fixed;
+  bottom: 19.99%; 
+  right: -7%;
+  display: none;
 }
 
 /* The popup form - hidden by default */

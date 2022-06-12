@@ -51,32 +51,23 @@ $(window).on('keydown', function(e) {
 
 var Fake = [
   'Olá, em que posso ajudar?',
-  'Nice to meet you',
-  'How are you?',
-  'Not too bad, thanks',
-  'What do you do?',
-  'That\'s awesome',
-  'Gdevit is a nice place to stay',
-  'I think you\'re a nice person',
-  'Why do you think that?',
-  'Can you explain?',
-  'Anyway I\'ve gotta go now',
-  'It was a pleasure chat with you',
-  'Time to make a new project',
-  'Bye',
-  ':)'
+  'Deseja agendar uma consulta?',
+  'Otimo! Qual a sua disponibilidade?',
+  'Por favor indique-me a sua morada',
+  'Vou necessitar também do seu contacto',
+  'Obrigado! Entrarei em contacto consigo antes de chegar ao seu domicílio.'
 ]
 
 function fakeMessage() {
   if ($('.message-input').val() != '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="https://raw.githubusercontent.com/sabasan13/sabasan13.github.io/master/fakemessage-profile.jpg" alt=""></figure><span></span></div>').appendTo($('.mCSB_container')).addClass('new');
+  $('<div class="message loading new"><span></span></div>').appendTo($('.mCSB_container')).addClass('new');
   updateScrollbar();
  
   setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="https://raw.githubusercontent.com/sabasan13/sabasan13.github.io/master/fakemessage-profile.jpg" alt=""></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new">' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
     i++;
