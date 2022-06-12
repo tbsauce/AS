@@ -11915,12 +11915,12 @@ position: absolute;
 }
 
 .form-popup1 {
-  width: 35%;
-  height: 10%;
-  position: fixed;
-  bottom: 19.99%; 
-  right: -7%;
   display: none;
+  position: fixed;
+  bottom: 250px;
+  right: 150px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
 }
 
 /* The popup form - hidden by default */
