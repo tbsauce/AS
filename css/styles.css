@@ -11929,6 +11929,20 @@ background: #1cc88a;
   z-index: 9;
 }
 
+.form-popup2 {
+  display: none;
+  bottom: 275px;
+  width: 800px;
+  height: 800px;
+  position:fixed; 
+  top: calc(50% - 350px); 
+  left: calc(50% - 470px); 
+}
+.container1{
+  width: 900px;
+  height: 1000px;
+}
+
 /* The popup form - hidden by default */
 .form-popup {
   width: 600px;

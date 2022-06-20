@@ -53,6 +53,15 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+function add_pet(){
+    var pet_name = document.getElementById('aname').value;
+    var pet_weight = document.getElementById('aweight').value;
+    var pet_age = document.getElementById('aage').value;
+    sessionStorage.setItem("Name_a", pet_name);
+    sessionStorage.setItem("Weight", pet_weight);
+    sessionStorage.setItem("Age", pet_age);
+}
+
 function login1()
 {
     var u = "filipe"
@@ -149,6 +158,9 @@ function Login(){
 if(sessionStorage.length == 0){
     sessionStorage.setItem("ref", "login.html");
     sessionStorage.setItem("Name", "Login");
+    sessionStorage.setItem("Name_a", "Name1");
+    sessionStorage.setItem("Weight", "kg");
+    sessionStorage.setItem("Age", "anos");
 }
 
 
@@ -157,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("navlogin").innerHTML= sessionStorage.getItem("Name"); 
         document.getElementById("navlogin").href= sessionStorage.getItem("ref");
         document.getElementById("name_pessoa").innerHTML= sessionStorage.getItem("Name");
+        document.getElementById("pet_name").innerHTML= sessionStorage.getItem("Name_a");
         
 
 

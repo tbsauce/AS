@@ -64,54 +64,103 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
+                            
+                            
+
                             <div class="col-lg-6 d-none d-lg-block">
-                                <img class="" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img id="imgPreview" src="" alt="Preview">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h1 text-warning mb-5">
-                                        Flash
+                                        <h1 class="h1 text-warning mb-5" id="pet_name">
+                                            <span id="result"></span>
+                                        <script>
+                                            document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+                                        </script>
                                         </h1>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-sm-3 mb-4 h6 text-gray-900 mb-3">
+                                        <div class="col-sm-6 mb-4 h6 text-gray-900 mb-3">
                                             Peso:
                                         </div>
-                                        <div class="col-sm-9">
-                                            28kg
+                                        <div class="col-sm-6" id="pet_weight">
+                                            <span id="result1"></span> Kg
+                                        <script>
+                                            document.getElementById("result1").innerHTML=localStorage.getItem("textvalue1");
+                                        </script>
                                         </div>
+                                        
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-sm-3 mb-4 h6 text-gray-900 mb-3">
+                                        <div class="col-sm-6 mb-4 h6 text-gray-900 mb-3">
                                             Idade:
                                         </div>
-                                        <div class="col-sm-9">
-                                            5 anos
+                                        <div class="col-sm-6" id="pet_age">
+                                            <span id="result2"></span> Anos
+                                        <script>
+                                            document.getElementById("result2").innerHTML=localStorage.getItem("textvalue2");
+                                        </script>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-sm-3 mb-4 h6 text-gray-900 mb-3">
+                                        <div class="col-sm-6 mb-4 h6 text-gray-900 mb-3">
                                             Raça:
                                         </div>
-                                        <div class="col-sm-9">
-                                            Rafeiro
+                                        <div class="col-sm-6" id="pet_raca">
+                                            <span id="result3"></span>
+                                        <script>
+                                            document.getElementById("result3").innerHTML=localStorage.getItem("textvalue3");
+                                        </script>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-4 h6 text-gray-900 mb-3">
+                                            Diagnóstico:
+                                        </div>
+                                        <div class="col-sm-6" id="pet_diagnose">
+                                            <span id="result4"></span>
+                                        <script>
+                                            document.getElementById("result4").innerHTML=localStorage.getItem("textvalue4");
+                                        </script>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-4 mb-4 h6 text-gray-900 mb-3">
-                                            Diagnóstico:
+                                            Change Photo:
                                         </div>
-                                        <div class="col-sm-8">
-                                            Desnutrição, Pata direita frontal partida
+                                        <div class="col-sm-7" id="pet_pic">
+                                            <a class="btn btn-primary btn-user btn-block" id="button_">
+                                            <input type="file" id="myFileInput" style="display:none;">
+                                            <label for="myFileInput">Choose image</label>
+                    
+                                            </a>
+
                                         </div>
                                     </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-4 mb-4 h6 text-gray-900 mb-3">
+                                                
+                                            </div>
+                                            <div class="col-sm-7" id="pet_pic">
+                                            <a class="btn btn-primary btn-user btn-block" id="button_" href="new_pet.html" >
+                                            Save
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                        
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                
+                    
+                
+                
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
@@ -125,7 +174,7 @@
                                             Ativos:
                                         </div>
                                         <div class="col-sm-9">
-                                            Tratatamento da pata
+                                            Nenhum plano ativo
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -133,7 +182,7 @@
                                             Concluidos:
                                         </div>
                                         <div class="col-sm-9">
-                                         Desnutrição
+                                         Nenhum plano concluído
                                         </div>
                                     </div>
                                     
@@ -273,6 +322,9 @@
         </form>
       </div>
 
+      
+     
+
     <!-- inspired by http://colorhunt.co/c/8184 and 
     https://dribbble.com/shots/2407357-Calendar%60 -->
 
@@ -288,6 +340,27 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="js/js_info.js"></script>
+
+    <script>
+        document.querySelector("#myFileInput").addEventListener("change", function(){
+            const reader = new FileReader();
+    
+            reader.addEventListener("load", () => {
+                localStorage.setItem("recent-image", reader.result);
+            });
+    
+            reader.readAsDataURL(this.files[0]);
+        });
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const recentImageDataUrl = localStorage.getItem("recent-image");
+    
+            if (recentImageDataUrl){
+                document.querySelector("#imgPreview").setAttribute("src", recentImageDataUrl);
+            }
+        });
+    </script>
 
     <script>
 function openForm() {
@@ -296,6 +369,9 @@ function openForm() {
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+}
+function closeForm1() {
+  document.getElementById("myForm1").style.display = "none";
 }
 </script>
 </body>
