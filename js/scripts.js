@@ -74,7 +74,7 @@ function login1()
     
         if(username!=null){
             
-            alert('Login successful');
+            //alert('Login successful');
             //window.location.href = "/home/filipe/Desktop/AS/index.html"
             sessionStorage.setItem("Name", username);
             sessionStorage.setItem("ref", "Pessoa.html");
