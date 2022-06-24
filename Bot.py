@@ -9,7 +9,7 @@ import time
 import os
 
 driver = webdriver.Chrome(
-    executable_path="/Users/TiagoC/Desktop/chromedriver"
+    executable_path="/home/sauce/Downloads/Chorme/chromedriver"
 )
 driver.get("https://trcoelhoo.github.io/AS-FARMWEB/")
 f = open("results.txt", "a")
